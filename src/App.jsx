@@ -253,25 +253,25 @@ const Hero = ({ navigate }) => {
                     </motion.div>
                 </div>
                 
-                {/* [MODIFIED] Image Content - Centered, full-width container, staggered, and larger */}
-                <div className="flex justify-center items-end w-full mt-16 md:mt-20 space-x-[-8rem] md:space-x-[-12rem]">
+                {/* [MODIFIED] Image Content - Centered, larger, staggered, and .png extension */}
+                <div className="flex justify-center items-end w-full mt-16 md:mt-20 space-x-[-12rem] md:space-x-[-16rem]">
                     <motion.div 
                         initial={{ opacity: 0, y: 50, x: 20 }}
                         animate={{ opacity: 1, y: 0, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        // [MODIFIED] z-10 removed, Volt is behind
+                        // Volt is behind (no z-index)
                     >
-                        {/* [MODIFIED] Reverted to local path with correct .jpg extension */}
-                        <img src="/images/bt_0011_Volt.png" alt="NanoRex Volt Bottle" className="w-96 md:w-[512px] max-w-none" />
+                        {/* [MODIFIED] Significantly increased size and changed to .png */}
+                        <img src="/images/bt_0011_Volt.png" alt="NanoRex Volt Bottle" className="w-[32rem] md:w-[48rem] max-w-none" />
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: 50, x: -20 }}
                         animate={{ opacity: 1, y: 0, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="z-10" // [MODIFIED] Thunder is in front
+                        className="z-10" // Thunder is in front
                     >
-                        {/* [MODIFIED] Reverted to local path with correct .jpg extension */}
-                        <img src="/images/bt_0010_Thunder.png" alt="NanoRex Thunder Bottle" className="w-112 md:w-[640px] max-w-none" />
+                        {/* [MODIFIED] Significantly increased size (larger than Volt) and changed to .png */}
+                        <img src="/images/bt_0010_Thunder.png" alt="NanoRex Thunder Bottle" className="w-[36rem] md:w-[56rem] max-w-none" />
                     </motion.div>
                 </div>
             </div>
@@ -284,14 +284,14 @@ const Products = () => {
     const products = [
         {
             name: "Volt",
-            image: "/images/bx_0011_Volt.jpg", // [MODIFIED] Reverted to local path
+            image: "/images/bx_0011_Volt.jpg", // Path is correct (.jpg)
             title: "For Light Vehicles",
             description: "Optimized for sedans, compacts, and gasoline/hybrid engines. Treats up to 5L of oil.",
             specs: "200ml (6.7 fl oz)"
         },
         {
             name: "Thunder",
-            image: "/images/bx_0010_Thunder.jpg", // [MODIFIED] Reverted to local path
+            image: "/images/bx_0010_Thunder.jpg", // Path is correct (.jpg)
             title: "For SUVs & Trucks",
             description: "Heavy-duty formula for SUVs, trucks, and diesel engines. Treats up to 8L of oil.",
             specs: "320ml (10.8 fl oz)"
@@ -324,7 +324,8 @@ const Products = () => {
                                 </h3>
                                 <p className="text-lg font-bold text-white mb-3">{product.title}</p>
                                 <p className="text-gray-400 mb-6">{product.description}</p>
-                                <Badge className="bg-[#2a2a1a] text-gray-300 mb-6">{product.specs}</Badge>
+                                <Badge className="bg-[#2a2a2a] text-gray-300 mb-6">{product.specs}</Badge>
+                                {/* [MODIFIED] Button color changed to orange/black and icon changed */}
                                 <Button 
                                     as="a" 
                                     href="https://www.amazon.com/s?k=nanorex" 
