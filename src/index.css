@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-gray-300 antialiased;
+  }
+}
+
+/* AI 응답 HTML 스타일 */
+.ai-response p {
+  @apply mb-3;
+}
+.ai-response b {
+  @apply text-white;
+}
+.ai-response ul {
+  @apply list-disc list-inside space-y-2;
+}
+.ai-response li {
+  @apply text-gray-300;
+}
