@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #eeeeee;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px);
+  background-size: 30px 30px;
+}
